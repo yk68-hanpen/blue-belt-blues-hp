@@ -401,9 +401,9 @@ a {
 }
 
 .bbb-logo {
-  width: 130px;
-  height: 98px;
-  color: #ffffff;
+  width: 180px;
+  height: auto;
+  display: block;
 }
 
 .hero-title {
@@ -961,9 +961,10 @@ a {
 }
 
 .bbb-logo-footer {
-  width: 80px;
-  height: 60px;
-  color: rgba(255, 255, 255, 0.4);
+  width: 110px;
+  height: auto;
+  display: block;
+  opacity: 0.5;
 }
 
 .footer-nav h4, .footer-contact h4 {
