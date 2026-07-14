@@ -406,6 +406,11 @@ a {
   display: block;
 }
 
+.bbb-logo-img {
+  width: 130px;
+  height: auto;
+}
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 900;
@@ -692,6 +697,47 @@ a {
   }
 }
 
+.location-info-wrapper {
+  margin-bottom: 40px;
+}
+
+.location-maps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .location-maps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-embed-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.map-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-light-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-label i {
+  color: var(--accent-blue);
+}
+
+.map-embed-card iframe {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
 .location-list {
   display: flex;
   flex-direction: column;
@@ -965,6 +1011,12 @@ a {
   height: auto;
   display: block;
   opacity: 0.5;
+}
+
+.bbb-logo-img-footer {
+  width: 80px;
+  height: auto;
+  opacity: 0.6;
 }
 
 .footer-nav h4, .footer-contact h4 {

@@ -1,474 +1,678 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="社会人向けブラジリアン柔術サークル『Blue Belt Blues（ブルーベルトブルース）』公式サイト。シンプルに柔術を楽しむ。初心者歓迎、千葉県流山市で活動中。">
-  <meta name="keywords" content="Blue Belt Blues, 柔術サークル, ブラジリアン柔術, BJJ, 流山市, 千葉, 格闘技, 社会人サークル, プラトー">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://blue-belt-blues.jp/">
-  <meta property="og:title" content="Blue Belt Blues | 社会人ブラジリアン柔術サークル">
-  <meta property="og:description" content="「PLATEAU MEETS PATIENCE」柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。それでも止めずに、シンプルに楽しもう。Blue Belt Blues公式サイト。">
-  <meta property="og:image" content="images/og-image.jpg">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="社会人向けブラジリアン柔術サークル『Blue Belt Blues（ブルーベルトブルース）』公式サイト。シンプルに柔術を楽しむ。初心者歓迎、千葉県流山市で活動中。"
+        />
+        <meta
+            name="keywords"
+            content="Blue Belt Blues, 柔術サークル, ブラジリアン柔術, BJJ, 流山市, 千葉, 格闘技, 社会人サークル, プラトー"
+        />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Blue Belt Blues | 社会人ブラジリアン柔術サークル">
-  <meta property="twitter:description" content="「PLATEAU MEETS PATIENCE」柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。それでも止めずに、シンプルに楽しもう。Blue Belt Blues公式サイト。">
-  <meta property="twitter:image" content="images/og-image.jpg">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://blue-belt-blues.jp/" />
+        <meta
+            property="og:title"
+            content="Blue Belt Blues | 社会人ブラジリアン柔術サークル"
+        />
+        <meta
+            property="og:description"
+            content="「PLATEAU MEETS PATIENCE」柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。それでも止めずに、シンプルに楽しもう。Blue Belt Blues公式サイト。"
+        />
+        <meta property="og:image" content="images/og-image.jpg" />
 
-  <title>Blue Belt Blues | 社会人ブラジリアン柔術サークル</title>
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:title"
+            content="Blue Belt Blues | 社会人ブラジリアン柔術サークル"
+        />
+        <meta
+            property="twitter:description"
+            content="「PLATEAU MEETS PATIENCE」柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。それでも止めずに、シンプルに楽しもう。Blue Belt Blues公式サイト。"
+        />
+        <meta property="twitter:image" content="images/og-image.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="images/favicon-512.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <title>Blue Belt Blues | 社会人ブラジリアン柔術サークル</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" sizes="any">
+        <link rel="icon" type="image/png" href="images/favicon-512.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-  <!-- Navigation Bar -->
-  <header id="main-header" class="header-nav">
-    <div class="container nav-container">
-      <a href="#" class="logo" id="header-logo">
-        <span class="logo-accent">BLUE BELT BLUES</span>
-      </a>
-      <nav class="nav-links" id="main-nav">
-        <a href="#philosophy" class="nav-link">哲学</a>
-        <a href="#features" class="nav-link">特徴について</a>
-        <a href="#community" class="nav-link">コミュニティ</a>
-        <a href="#locations" class="nav-link">練習場所</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="#contact" class="btn btn-primary" id="nav-cta-btn">体験を予約する</a>
-      </div>
-      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="メニューを開く">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </div>
-  </header>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@400;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="container hero-container text-center">
-        <div class="hero-content scroll-reveal">
-          
-          <!-- Logo Graphic -->
-          <div class="logo-graphic-wrapper">
-            <img src="images/logo.png" alt="Blue Belt Blues Logo" class="bbb-logo">
-          </div>
+        <!-- FontAwesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
 
-          <h1 class="hero-title tracking-wide">
-            PLATEAU<br>
-            <span class="meets-text">MEETS</span><br>
-            PATIENCE
-          </h1>
-          
-          <p class="hero-subtitle">
-            柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。<br>
-            それでも止めずに、シンプルに楽しもう。
-          </p>
-          
-          <div class="hero-actions justify-center">
-            <a href="#contact" class="btn btn-primary btn-large" id="hero-primary-cta">
-              体験を予約する
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-down-indicator">
-        <a href="#philosophy" aria-label="哲学セクションへスクロール">
-          <i class="fa-solid fa-chevron-down"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Philosophy Section (哲学) -->
-    <section id="philosophy" class="philosophy-section section-padding">
-      <div class="container">
-        
-        <div class="philosophy-intro-grid scroll-reveal">
-          <div class="philosophy-header">
-            <span class="section-tag">PHILOSOPHY</span>
-            <h2 class="section-title">哲学</h2>
-          </div>
-          <div class="philosophy-desc-wrapper">
-            <p class="section-desc text-large">
-              柔術は続けていれば成長が止まったように感じる時期に必ず出会います。<br>
-              それでも、止めずにまずは、シンプルに柔術を楽しむ。<br>
-              それが Blue Belt Blues の考え方です。
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-2-cols gap-lg">
-          <!-- Phil Card 1 -->
-          <div class="card phil-card scroll-reveal-up" id="phil-card-1">
-            <div class="card-num">01</div>
-            <h3>プラトー (Plateau)</h3>
-            <p>その先に上手くはいない。覚えるだけ。でも小さな積み重ねが大きな差になる。焦らず、着実に、自分のペースで。</p>
-          </div>
-
-          <!-- Phil Card 2 -->
-          <div class="card phil-card scroll-reveal-up" id="phil-card-2" style="animation-delay: 0.1s;">
-            <div class="card-num">02</div>
-            <h3>自主研究</h3>
-            <p>インストラクターはいない。自分の好きな技を深堀りし、互いに学ぶ。主体性を持って取り組むための場所。</p>
-          </div>
-
-          <!-- Phil Card 3 -->
-          <div class="card phil-card scroll-reveal-up" id="phil-card-3" style="animation-delay: 0.2s;">
-            <div class="card-num">03</div>
-            <h3>ノープレッシャー</h3>
-            <p>勝利や上達のプレッシャーを忘れ、自分の今のペースで練習を楽しむ。比較のない、穏やかな空間を大切にする。</p>
-          </div>
-
-          <!-- Phil Card 4 -->
-          <div class="card phil-card scroll-reveal-up" id="phil-card-4" style="animation-delay: 0.3s;">
-            <div class="card-num">04</div>
-            <h3>エコノミー</h3>
-            <p>公共の柔道場を使い、参加者で施設利用料を割り勘。月会費はなく、1回あたり300〜500円で練習できる。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section (特徴について) -->
-    <section id="features" class="features-section section-padding dark-bg">
-      <div class="container">
-        <div class="section-header text-center scroll-reveal">
-          <span class="section-tag">FEATURES</span>
-          <h2 class="section-title">特徴について</h2>
-          <p class="section-subtitle">初心者から経験者まで、誰もが楽しめる環境がここにあります。</p>
-        </div>
-
-        <div class="grid grid-3-cols gap-md">
-          <!-- Feature Item 1 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-1">
-            <div class="feature-icon-circle">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <h3>初心者・未経験者大歓迎</h3>
-            <p>メンバーの多くが未経験スタート。基本から優しく指導します。</p>
-          </div>
-
-          <!-- Feature Item 2 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-2" style="animation-delay: 0.05s;">
-            <div class="feature-icon-circle">
-              <i class="fa-solid fa-users"></i>
-            </div>
-            <h3>メンバー同士で学び合う</h3>
-            <p>インストラクターなし。参加者同士が互いに技を見せ合い、自主的に深める。</p>
-          </div>
-
-          <!-- Feature Item 3 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-3" style="animation-delay: 0.1s;">
-            <div class="feature-icon-circle">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3>安全・清潔な練習環境</h3>
-            <p>清潔感のある高品質なマットを使用。怪我のない安全第一の指導。</p>
-          </div>
-
-          <!-- Feature Item 4 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-4" style="animation-delay: 0.15s;">
-            <div class="feature-icon-circle">
-              <i class="fa-solid fa-users-rays"></i>
-            </div>
-            <h3>コミュニティ重視</h3>
-            <p>練習だけでなく、様々なイベントで世代を超えた交流が生まれます。</p>
-          </div>
-
-          <!-- Feature Item 5 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-5" style="animation-delay: 0.2s;">
-            <div class="feature-icon-circle">
-              <i class="fa-regular fa-calendar-check"></i>
-            </div>
-            <h3>参加者で日程を調整</h3>
-            <p>固定スケジュールなし。参加者が集まれる日時を都度調整して施設を予約します。</p>
-          </div>
-
-          <!-- Feature Item 6 -->
-          <div class="feature-item-bbb scroll-reveal-up" id="feature-6" style="animation-delay: 0.25s;">
-            <div class="feature-icon-circle">
-              <i class="fa-regular fa-clock"></i>
-            </div>
-            <h3>見学・体験随時受付中</h3>
-            <p>事前の予約で、いつでも無料で見学や体験参加が可能です。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Community Section (コミュニティ) -->
-    <section id="community" class="community-section section-padding">
-      <div class="container">
-        <div class="section-header text-center scroll-reveal">
-          <span class="section-tag">OUR COMMUNITY</span>
-          <h2 class="section-title">コミュニティ</h2>
-          <p class="section-subtitle">「仕事」とも「家庭」とも違う、第3の場所。 世代を超え、多様なメンバーが集う、アットホームなコミュニティです。</p>
-        </div>
-
-        <!-- Dynamic Responsive Image Grid (B&W/Muted tones like mock) -->
-        <div class="community-gallery-grid scroll-reveal">
-          <div class="gallery-col col-left">
-            <div class="gallery-img-wrapper item-square">
-              <img src="images/gallery-2.jpg" alt="柔術の握手・練習" class="gallery-img-bbb">
-            </div>
-            <div class="gallery-img-wrapper item-square">
-              <img src="images/gallery-2.jpg" alt="練習前の確認" class="gallery-img-bbb">
-            </div>
-          </div>
-          <div class="gallery-col col-middle">
-            <div class="gallery-img-wrapper item-wide">
-              <img src="images/gallery-4.jpg" alt="サークルメンバーの円陣" class="gallery-img-bbb">
-            </div>
-            <div class="gallery-img-wrapper item-wide">
-              <img src="images/hero-bg.jpg" alt="清潔な白いマットスペース" class="gallery-img-bbb">
-            </div>
-          </div>
-          <div class="gallery-col col-right">
-            <div class="gallery-img-wrapper item-tall">
-              <img src="images/about-training.jpg" alt="道着の袖のクローズアップ" class="gallery-img-bbb">
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonials -->
-        <div class="testimonials-container grid grid-2-cols gap-md scroll-reveal-up">
-          <div class="testimonial-card">
-            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-            <p class="testimonial-text">毎週の練習が最高のストレス発散になっています。格闘技未経験でしたが、今では生活の一部です。</p>
-            <span class="testimonial-author">— 30代・会社員</span>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-            <p class="testimonial-text">体力作りと護身術を目的に始めました。アットホームで女性でも安心して続けられます。</p>
-            <span class="testimonial-author">— 20代・女性</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Practice Location Section (練習場所) -->
-    <section id="locations" class="location-section section-padding">
-      <div class="container">
-        
-        <div class="location-grid scroll-reveal">
-          
-          <!-- Left side: Locations list -->
-          <div class="location-info-column">
-            <span class="section-tag">LOCATIONS</span>
-            <h2 class="section-title">練習場所</h2>
-            
-            <div class="location-list">
-              <div class="location-item-bbb">
-                <div class="loc-bullet"></div>
-                <div>
-                  <h4>流山市北部柔道場（メイン）</h4>
-                  <p>〒270-0112 千葉県流山市青田１０９−１</p>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="main-header" class="header-nav">
+            <div class="container nav-container">
+                <a href="#" class="logo" id="header-logo">
+                    <span class="logo-accent">BLUE BELT BLUES</span>
+                </a>
+                <nav class="nav-links" id="main-nav">
+                    <a href="#philosophy" class="nav-link">哲学</a>
+                    <a href="#features" class="nav-link">特徴について</a>
+                    <a href="#community" class="nav-link">コミュニティ</a>
+                    <a href="#locations" class="nav-link">練習場所</a>
+                </nav>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-primary" id="nav-cta-btn"
+                        >体験を予約する</a
+                    >
                 </div>
-              </div>
+                <button
+                    class="mobile-menu-toggle"
+                    id="menu-toggle"
+                    aria-label="メニューを開く"
+                >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
 
-              <div class="location-item-bbb">
-                <div class="loc-bullet"></div>
-                <div>
-                  <h4>キッコーマンアリーナ（流山市民総合体育館）</h4>
-                  <p>〒270-0135 千葉県流山市野々下１丁目４０−１</p>
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container text-center">
+                    <div class="hero-content scroll-reveal">
+                        <!-- Logo Graphic -->
+                        <div class="logo-graphic-wrapper">
+                            <img
+                                src="images/logo.png"
+                                alt="Blue Belt Blues Logo"
+                                class="bbb-logo-img"
+                            />
+                        </div>
+
+                        <h1 class="hero-title tracking-wide">
+                            PLATEAU<br />
+                            <span class="meets-text">MEETS</span><br />
+                            PATIENCE
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            柔術を続けていれば、成長が止まったように感じる時期に必ず出会う。<br />
+                            それでも止めずに、シンプルに楽しもう。
+                        </p>
+
+                        <div class="hero-actions justify-center">
+                            <a
+                                href="#contact"
+                                class="btn btn-primary btn-large"
+                                id="hero-primary-cta"
+                            >
+                                体験を予約する
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="scroll-down-indicator">
+                    <a
+                        href="#philosophy"
+                        aria-label="哲学セクションへスクロール"
+                    >
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Philosophy Section (哲学) -->
+            <section id="philosophy" class="philosophy-section section-padding">
+                <div class="container">
+                    <div class="philosophy-intro-grid scroll-reveal">
+                        <div class="philosophy-header">
+                            <span class="section-tag">PHILOSOPHY</span>
+                            <h2 class="section-title">哲学</h2>
+                        </div>
+                        <div class="philosophy-desc-wrapper">
+                            <p class="section-desc text-large">
+                                柔術は続けていれば成長が止まったように感じる時期に必ず出会います。<br />
+                                それでも、止めずにまずは、シンプルに柔術を楽しむ。<br />
+                                それが Blue Belt Blues の考え方です。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2-cols gap-lg">
+                        <!-- Phil Card 1 -->
+                        <div
+                            class="card phil-card scroll-reveal-up"
+                            id="phil-card-1"
+                        >
+                            <div class="card-num">01</div>
+                            <h3>プラトー (Plateau)</h3>
+                            <p>
+                                その先に上手くはいない。覚えるだけ。でも小さな積み重ねが大きな差になる。焦らず、着実に、自分のペースで。
+                            </p>
+                        </div>
+
+                        <!-- Phil Card 2 -->
+                        <div
+                            class="card phil-card scroll-reveal-up"
+                            id="phil-card-2"
+                            style="animation-delay: 0.1s"
+                        >
+                            <div class="card-num">02</div>
+                            <h3>自主研究</h3>
+                            <p>
+                                インストラクターはいない。自分の好きな技を深堀りし、互いに学ぶ。主体性を持って取り組むための場所。
+                            </p>
+                        </div>
+
+                        <!-- Phil Card 3 -->
+                        <div
+                            class="card phil-card scroll-reveal-up"
+                            id="phil-card-3"
+                            style="animation-delay: 0.2s"
+                        >
+                            <div class="card-num">03</div>
+                            <h3>ノープレッシャー</h3>
+                            <p>
+                                勝利や上達のプレッシャーを忘れ、自分の今のペースで練習を楽しむ。比較のない、穏やかな空間を大切にする。
+                            </p>
+                        </div>
+
+                        <!-- Phil Card 4 -->
+                        <div
+                            class="card phil-card scroll-reveal-up"
+                            id="phil-card-4"
+                            style="animation-delay: 0.3s"
+                        >
+                            <div class="card-num">04</div>
+                            <h3>エコノミー</h3>
+                            <p>
+                                公共の柔道場を使い、参加者で施設利用料を割り勘。月会費はなく、1回あたり300〜500円で練習できる。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section (特徴について) -->
+            <section
+                id="features"
+                class="features-section section-padding dark-bg"
+            >
+                <div class="container">
+                    <div class="section-header text-center scroll-reveal">
+                        <span class="section-tag">FEATURES</span>
+                        <h2 class="section-title">特徴について</h2>
+                        <p class="section-subtitle">
+                            初心者から経験者まで、誰もが楽しめる環境がここにあります。
+                        </p>
+                    </div>
+
+                    <div class="grid grid-3-cols gap-md">
+                        <!-- Feature Item 1 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-1"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3>初心者・未経験者大歓迎</h3>
+                            <p>
+                                メンバーの多くが未経験スタート。基本から優しく指導します。
+                            </p>
+                        </div>
+
+                        <!-- Feature Item 2 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-2"
+                            style="animation-delay: 0.05s"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3>メンバー同士で学び合う</h3>
+                            <p>
+                                インストラクターなし。参加者同士が互いに技を見せ合い、自主的に深める。
+                            </p>
+                        </div>
+
+                        <!-- Feature Item 3 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-3"
+                            style="animation-delay: 0.1s"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3>安全・清潔な練習環境</h3>
+                            <p>
+                                清潔感のある高品質なマットを使用。怪我のない安全第一の指導。
+                            </p>
+                        </div>
+
+                        <!-- Feature Item 4 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-4"
+                            style="animation-delay: 0.15s"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-users-rays"></i>
+                            </div>
+                            <h3>コミュニティ重視</h3>
+                            <p>
+                                練習だけでなく、様々なイベントで世代を超えた交流が生まれます。
+                            </p>
+                        </div>
+
+                        <!-- Feature Item 5 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-5"
+                            style="animation-delay: 0.2s"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-regular fa-calendar-check"></i>
+                            </div>
+                            <h3>参加者で日程を調整</h3>
+                            <p>
+                                固定スケジュールなし。参加者が集まれる日時を都度調整して施設を予約します。
+                            </p>
+                        </div>
+
+                        <!-- Feature Item 6 -->
+                        <div
+                            class="feature-item-bbb scroll-reveal-up"
+                            id="feature-6"
+                            style="animation-delay: 0.25s"
+                        >
+                            <div class="feature-icon-circle">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <h3>見学・体験随時受付中</h3>
+                            <p>
+                                事前の予約で、いつでも無料で見学や体験参加が可能です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Section (コミュニティ) -->
+            <section id="community" class="community-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center scroll-reveal">
+                        <span class="section-tag">OUR COMMUNITY</span>
+                        <h2 class="section-title">コミュニティ</h2>
+                        <p class="section-subtitle">
+                            「仕事」とも「家庭」とも違う、第3の場所。
+                            世代を超え、多様なメンバーが集う、アットホームなコミュニティです。
+                        </p>
+                    </div>
+
+                    <!-- Dynamic Responsive Image Grid (B&W/Muted tones like mock) -->
+                    <div class="community-gallery-grid scroll-reveal">
+                        <div class="gallery-col col-left">
+                            <div class="gallery-img-wrapper item-square">
+                                <img
+                                    src="images/gallery-2.jpg"
+                                    alt="柔術の握手・練習"
+                                    class="gallery-img-bbb"
+                                />
+                            </div>
+                            <div class="gallery-img-wrapper item-square">
+                                <img
+                                    src="images/gallery-2.jpg"
+                                    alt="練習前の確認"
+                                    class="gallery-img-bbb"
+                                />
+                            </div>
+                        </div>
+                        <div class="gallery-col col-middle">
+                            <div class="gallery-img-wrapper item-wide">
+                                <img
+                                    src="images/gallery-4.jpg"
+                                    alt="サークルメンバーの円陣"
+                                    class="gallery-img-bbb"
+                                />
+                            </div>
+                            <div class="gallery-img-wrapper item-wide">
+                                <img
+                                    src="images/hero-bg.jpg"
+                                    alt="清潔な白いマットスペース"
+                                    class="gallery-img-bbb"
+                                />
+                            </div>
+                        </div>
+                        <div class="gallery-col col-right">
+                            <div class="gallery-img-wrapper item-tall">
+                                <img
+                                    src="images/about-training.jpg"
+                                    alt="道着の袖のクローズアップ"
+                                    class="gallery-img-bbb"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div
+                        class="testimonials-container grid grid-2-cols gap-md scroll-reveal-up"
+                    >
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                毎週の練習が最高のストレス発散になっています。格闘技未経験でしたが、今では生活の一部です。
+                            </p>
+                            <span class="testimonial-author"
+                                >— 30代・会社員</span
+                            >
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                体力作りと護身術を目的に始めました。アットホームで女性でも安心して続けられます。
+                            </p>
+                            <span class="testimonial-author">— 20代・女性</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Location Section (練習場所) -->
+            <section id="locations" class="location-section section-padding">
+                <div class="container">
+                    <div class="location-info-wrapper scroll-reveal">
+                        <span class="section-tag">LOCATIONS</span>
+                        <h2 class="section-title">練習場所</h2>
+                        <p class="location-footnote">
+                            千葉県流山市の公共施設を使用。参加費は施設利用料の割り勘（1回あたり300〜500円）。
+                        </p>
+                    </div>
+
+                    <div class="location-maps-grid scroll-reveal">
+                        <div class="map-embed-card">
+                            <p class="map-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                流山市北部柔道場（メイン）
+                            </p>
+                            <iframe
+                                src="https://maps.google.com/maps?q=千葉県流山市青田109-1&output=embed&hl=ja&z=16"
+                                width="100%"
+                                height="300"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="流山市北部柔道場の地図"
+                            ></iframe>
+                        </div>
+                        <div class="map-embed-card">
+                            <p class="map-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                キッコーマンアリーナ（流山市民総合体育館）
+                            </p>
+                            <iframe
+                                src="https://maps.google.com/maps?q=千葉県流山市野々下1丁目40-1&output=embed&hl=ja&z=16"
+                                width="100%"
+                                height="300"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="キッコーマンアリーナの地図"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Join Section (練習に参加する) -->
+            <section
+                id="contact"
+                class="contact-section section-padding dark-bg"
+            >
+                <div class="container container-narrow">
+                    <div class="section-header text-center scroll-reveal">
+                        <span class="section-tag">JOIN US</span>
+                        <h2 class="section-title">練習に参加する</h2>
+                        <p class="section-subtitle">
+                            まずは無料の体験・見学から。手ぶらでお気軽にご参加ください。
+                        </p>
+                    </div>
+
+                    <div
+                        class="contact-form-wrapper-bbb scroll-reveal-up"
+                        id="contact-box"
+                    >
+                        <form id="contact-form" novalidate>
+                            <div class="form-grid-bbb">
+                                <!-- Name -->
+                                <div class="form-group-bbb">
+                                    <label for="form-name"
+                                        >お名前
+                                        <span class="required-bbb"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="form-name"
+                                        name="name"
+                                        placeholder="お名前"
+                                        required
+                                    />
+                                    <span class="error-message" id="error-name"
+                                        >お名前を入力してください。</span
+                                    >
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group-bbb">
+                                    <label for="form-email"
+                                        >メールアドレス
+                                        <span class="required-bbb"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="form-email"
+                                        name="email"
+                                        placeholder="メールアドレス"
+                                        required
+                                    />
+                                    <span class="error-message" id="error-email"
+                                        >有効なメールアドレスを入力してください。</span
+                                    >
+                                </div>
+
+                                <!-- Experience -->
+                                <div class="form-group-bbb">
+                                    <label for="form-experience"
+                                        >経験有無
+                                        <span class="required-bbb"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <select
+                                        id="form-experience"
+                                        name="experience"
+                                        required
+                                    >
+                                        <option value="">
+                                            選択してください
+                                        </option>
+                                        <option value="none">
+                                            未経験（運動初心者歓迎）
+                                        </option>
+                                        <option value="other-martial">
+                                            他格闘技・武道経験あり
+                                        </option>
+                                        <option value="experienced">
+                                            柔術経験者
+                                        </option>
+                                    </select>
+                                    <span
+                                        class="error-message"
+                                        id="error-experience"
+                                        >経験の有無を選択してください。</span
+                                    >
+                                </div>
+
+                                <!-- Message -->
+                                <div class="form-group-bbb">
+                                    <label for="form-message">メッセージ</label>
+                                    <textarea
+                                        id="form-message"
+                                        name="message"
+                                        rows="5"
+                                        placeholder="体験日程のご希望やご質問等をご記入ください。"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-consent-bbb">
+                                <label class="checkbox-container-bbb">
+                                    <input
+                                        type="checkbox"
+                                        id="form-consent-check"
+                                        name="consent"
+                                        required
+                                    />
+                                    <span class="checkmark-bbb"></span>
+                                    <span
+                                        >プライバシーポリシーおよび規約に同意する</span
+                                    >
+                                </label>
+                                <span class="error-message" id="error-consent"
+                                    >同意いただけない場合は送信できません。</span
+                                >
+                            </div>
+
+                            <div class="form-submit-bbb text-center">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-large btn-submit-bbb"
+                                    id="form-submit-btn"
+                                >
+                                    体験を予約する
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-info">
+                    <!-- Logo Graphic -->
+                    <div class="logo-graphic-wrapper-footer">
+                        <img
+                            src="images/logo.png"
+                            alt="Blue Belt Blues Logo"
+                            class="bbb-logo-img-footer"
+                        />
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="#philosophy">哲学</a></li>
+                        <li><a href="#features">特徴について</a></li>
+                        <li><a href="#community">コミュニティ</a></li>
+                        <li><a href="#locations">練習場所</a></li>
+                        <li><a href="#contact">体験予約</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <p>
+                        練習のご参加や見学、取材依頼などはフォームまたはメールよりお気軽にご連絡ください。
+                    </p>
+                    <p class="email-contact">
+                        <i class="fa-regular fa-envelope icon-left"></i>
+                        info@bluebeltblues.example.com
+                    </p>
+                </div>
             </div>
 
-            <p class="location-footnote">
-              千葉県流山市の公共施設を使用。参加費は施設利用料の割り勘（1回あたり300〜500円）。
-            </p>
-          </div>
-
-          <!-- Right side: Vector-styled map placeholder -->
-          <div class="location-map-column">
-            <div class="map-illustration-card">
-              <div class="map-bg-pattern">
-                <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Abstract grid lines mapping Tokyo area -->
-                  <path d="M0 50H400" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.15"/>
-                  <path d="M0 150H400" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-                  <path d="M0 250H400" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.15"/>
-                  <path d="M100 0V300" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-                  <path d="M200 0V300" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.15"/>
-                  <path d="M300 0V300" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-                  
-                  <!-- Abstract major roads -->
-                  <path d="M-50 200C100 120 250 180 450 60" stroke="currentColor" stroke-width="3" opacity="0.25"/>
-                  <path d="M50 -50C120 100 180 200 320 350" stroke="currentColor" stroke-width="2.5" opacity="0.2"/>
-                  <path d="M250 -50C220 80 280 200 240 350" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-                  
-                  <!-- Location Markers -->
-                  <!-- 流山市北部柔道場 -->
-                  <g class="marker" transform="translate(160, 160)">
-                    <circle r="12" fill="var(--accent-blue)" opacity="0.2"/>
-                    <circle r="6" fill="var(--accent-blue)"/>
-                    <text y="-14" font-family="inherit" font-size="10" font-weight="700" fill="currentColor" text-anchor="middle">流山市北部柔道場</text>
-                  </g>
-
-                  <!-- キッコーマンアリーナ -->
-                  <g class="marker" transform="translate(240, 110)">
-                    <circle r="12" fill="var(--accent-blue)" opacity="0.2"/>
-                    <circle r="6" fill="var(--accent-blue)"/>
-                    <text y="-14" font-family="inherit" font-size="10" font-weight="700" fill="currentColor" text-anchor="middle">キッコーマンアリーナ</text>
-                  </g>
-                </svg>
-              </div>
-              <div class="map-controls">
-                <span><i class="fa-solid fa-location-dot icon-left"></i> Access Map (Nagareyama, Chiba)</span>
-              </div>
+            <div class="footer-bottom">
+                <div class="container bottom-container">
+                    <p class="copyright">
+                        &copy; 2026 Blue Belt Blues. All rights reserved.
+                    </p>
+                    <div class="bottom-links">
+                        <a href="#">プライバシーポリシー</a>
+                        <a href="#">利用規約</a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </footer>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Join Section (練習に参加する) -->
-    <section id="contact" class="contact-section section-padding dark-bg">
-      <div class="container container-narrow">
-        <div class="section-header text-center scroll-reveal">
-          <span class="section-tag">JOIN US</span>
-          <h2 class="section-title">練習に参加する</h2>
-          <p class="section-subtitle">まずは無料の体験・見学から。手ぶらでお気軽にご参加ください。</p>
-        </div>
-
-        <div class="contact-form-wrapper-bbb scroll-reveal-up" id="contact-box">
-          <form id="contact-form" novalidate>
-            <div class="form-grid-bbb">
-              <!-- Name -->
-              <div class="form-group-bbb">
-                <label for="form-name">お名前 <span class="required-bbb">*</span></label>
-                <input type="text" id="form-name" name="name" placeholder="お名前" required>
-                <span class="error-message" id="error-name">お名前を入力してください。</span>
-              </div>
-
-              <!-- Email -->
-              <div class="form-group-bbb">
-                <label for="form-email">メールアドレス <span class="required-bbb">*</span></label>
-                <input type="email" id="form-email" name="email" placeholder="メールアドレス" required>
-                <span class="error-message" id="error-email">有効なメールアドレスを入力してください。</span>
-              </div>
-
-              <!-- Experience -->
-              <div class="form-group-bbb">
-                <label for="form-experience">経験有無 <span class="required-bbb">*</span></label>
-                <select id="form-experience" name="experience" required>
-                  <option value="">選択してください</option>
-                  <option value="none">未経験（運動初心者歓迎）</option>
-                  <option value="other-martial">他格闘技・武道経験あり</option>
-                  <option value="experienced">柔術経験者</option>
-                </select>
-                <span class="error-message" id="error-experience">経験の有無を選択してください。</span>
-              </div>
-
-              <!-- Message -->
-              <div class="form-group-bbb">
-                <label for="form-message">メッセージ</label>
-                <textarea id="form-message" name="message" rows="5" placeholder="体験日程のご希望やご質問等をご記入ください。"></textarea>
-              </div>
+        <!-- Contact Form Success Modal -->
+        <div
+            class="modal"
+            id="success-modal"
+            aria-hidden="true"
+            role="dialog"
+            aria-labelledby="modal-title"
+        >
+            <div class="modal-backdrop" id="modal-close-backdrop"></div>
+            <div class="modal-content">
+                <button
+                    class="modal-close"
+                    id="modal-close-btn"
+                    aria-label="閉じる"
+                >
+                    &times;
+                </button>
+                <div class="modal-body text-center">
+                    <div class="modal-success-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 id="modal-title">体験の予約を受付ました！</h3>
+                    <p>送信が完了しました。</p>
+                    <p class="modal-desc">
+                        ご入力いただいたメールアドレス宛に、自動返信メールを送信しました。24時間以内に担当者より集合場所や持ち物について、改めてご案内を差し上げます。
+                    </p>
+                    <button class="btn btn-primary" id="modal-confirm-btn">
+                        閉じる
+                    </button>
+                </div>
             </div>
-
-            <div class="form-consent-bbb">
-              <label class="checkbox-container-bbb">
-                <input type="checkbox" id="form-consent-check" name="consent" required>
-                <span class="checkmark-bbb"></span>
-                <span>プライバシーポリシーおよび規約に同意する</span>
-              </label>
-              <span class="error-message" id="error-consent">同意いただけない場合は送信できません。</span>
-            </div>
-
-            <div class="form-submit-bbb text-center">
-              <button type="submit" class="btn btn-primary btn-large btn-submit-bbb" id="form-submit-btn">
-                体験を予約する
-              </button>
-            </div>
-          </form>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-info">
-        <!-- Logo Graphic Small -->
-        <div class="logo-graphic-wrapper-footer">
-          <img src="images/logo.png" alt="Blue Belt Blues Logo" class="bbb-logo-footer">
-        </div>
-      </div>
-      
-      <div class="footer-nav">
-        <h4>メニュー</h4>
-        <ul>
-          <li><a href="#philosophy">哲学</a></li>
-          <li><a href="#features">特徴について</a></li>
-          <li><a href="#community">コミュニティ</a></li>
-          <li><a href="#locations">練習場所</a></li>
-          <li><a href="#contact">体験予約</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h4>お問い合わせ</h4>
-        <p>練習のご参加や見学、取材依頼などはフォームまたはメールよりお気軽にご連絡ください。</p>
-        <p class="email-contact"><i class="fa-regular fa-envelope icon-left"></i> info@bluebeltblues.example.com</p>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <div class="container bottom-container">
-        <p class="copyright">&copy; 2026 Blue Belt Blues. All rights reserved.</p>
-        <div class="bottom-links">
-          <a href="#">プライバシーポリシー</a>
-          <a href="#">利用規約</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Contact Form Success Modal -->
-  <div class="modal" id="success-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
-    <div class="modal-backdrop" id="modal-close-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close-btn" aria-label="閉じる">&times;</button>
-      <div class="modal-body text-center">
-        <div class="modal-success-icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <h3 id="modal-title">体験の予約を受付ました！</h3>
-        <p>送信が完了しました。</p>
-        <p class="modal-desc">ご入力いただいたメールアドレス宛に、自動返信メールを送信しました。24時間以内に担当者より集合場所や持ち物について、改めてご案内を差し上げます。</p>
-        <button class="btn btn-primary" id="modal-confirm-btn">閉じる</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="app.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="app.js"></script>
+    </body>
 </html>
