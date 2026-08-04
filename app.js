@@ -182,12 +182,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }]
       };
 
-      // Notify Discord (fire-and-forget). The webhook URL is exposed in this
-      // static page by design; regenerate it in Discord if it is ever abused.
+      // Notify Discord (fire-and-forget). Send as multipart/form-data with a
+      // payload_json field instead of application/json: multipart is a
+      // CORS-safelisted content type, so the browser sends it as a "simple"
+      // request with no preflight. Discord then actually receives the message
+      // even though its response is not readable from client-side JS.
+      // The webhook URL is exposed in this static page by design; regenerate it
+      // in Discord if it is ever abused.
+      const discordForm = new FormData();
+      discordForm.append('payload_json', JSON.stringify(discordPayload));
       const notifyDiscord = fetch(DISCORD_WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(discordPayload)
+        body: discordForm
       }).catch(() => {});
 
       // Submit to Formspree (email record). The recipient address is configured
