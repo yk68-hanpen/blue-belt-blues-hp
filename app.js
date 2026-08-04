@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('form-submit-btn');
   const successModal = document.getElementById('success-modal');
+
+  // Discord webhook that receives instant notifications of new submissions.
+  const DISCORD_WEBHOOK_URL =
+    'https://discord.com/api/webhooks/1534182564036874351/RiNeCzoyW1Id_uUpJpnpq27zxlVwjjQOSYHYuStSdnBgv0KUDHa1NTrxTsuVVTSsQMeE';
   
   // Modal toggle elements
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -160,19 +164,55 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = submitBtn.innerText;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `送信中... <i class="fa-solid fa-spinner fa-spin icon-right"></i>`;
-      
-      // Simulate API submit latency (1.5 seconds)
-      setTimeout(() => {
-        // Reset button
-        submitBtn.disabled = false;
-        submitBtn.innerText = originalText;
-        
-        // Show success modal
-        openModal();
-        
-        // Reset form inputs
-        form.reset();
-      }, 1500);
+
+      // Build a formatted Discord notification from the current form values.
+      const expSelect = document.getElementById('form-experience');
+      const experienceText = expSelect.options[expSelect.selectedIndex]?.text || '(未選択)';
+      const discordPayload = {
+        username: 'Blue Belt Blues 体験申込',
+        embeds: [{
+          title: '🥋 新しい体験・見学の申込',
+          color: 0x1e60d8,
+          fields: [
+            { name: 'お名前', value: fields.name.input.value.trim() || '(未入力)' },
+            { name: 'メールアドレス', value: fields.email.input.value.trim() || '(未入力)' },
+            { name: '経験有無', value: experienceText },
+            { name: 'メッセージ', value: document.getElementById('form-message').value.trim() || '(なし)' }
+          ]
+        }]
+      };
+
+      // Notify Discord (fire-and-forget). The webhook URL is exposed in this
+      // static page by design; regenerate it in Discord if it is ever abused.
+      const notifyDiscord = fetch(DISCORD_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(discordPayload)
+      }).catch(() => {});
+
+      // Submit to Formspree (email record). The recipient address is configured
+      // on the Formspree side, so it is never exposed in this page. Success of
+      // this request gates the confirmation modal.
+      const submitFormspree = fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      Promise.allSettled([submitFormspree, notifyDiscord])
+        .then(([formspreeResult]) => {
+          const ok = formspreeResult.status === 'fulfilled' && formspreeResult.value.ok;
+          if (ok) {
+            openModal();
+            form.reset();
+          } else {
+            alert('送信に失敗しました。時間をおいて再度お試しください。');
+          }
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+        });
     } else {
       // Scroll to the first invalid field for better UX
       const firstInvalid = document.querySelector('.is-invalid');
