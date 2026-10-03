@@ -386,6 +386,20 @@
                         <p>
                             YouTubeから柔術チャンネルの動画だけを集めたサイトです。探したいガードや、お好みのチャンネルから、見たい動画にすぐアクセスできます。
                         </p>
+                        <a
+                            href="https://bjj-pedia.vercel.app/"
+                            class="bjjpedia-screenshot-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="BJJ-pedia を新しいタブで開く"
+                        >
+                            <img
+                                src="images/bjj-pedia-screenshot.png"
+                                alt="BJJ-pedia のトップ画面。柔術動画を種類・ギア・レベル・ポジション・チャンネルで絞り込んで探せる。"
+                                class="bjjpedia-screenshot"
+                                loading="lazy"
+                            />
+                        </a>
                         <p class="bjjpedia-feedback">
                             <i class="fa-solid fa-flask"></i>
                             現在はβ版です。お気づきの点やご要望など、ぜひフィードバックをお寄せください。
@@ -536,9 +550,7 @@
                                         <option value="">
                                             選択してください
                                         </option>
-                                        <option value="none">
-                                            未経験（運動初心者歓迎）
-                                        </option>
+                                        <option value="none">未経験</option>
                                         <option value="other-martial">
                                             他格闘技・武道経験あり
                                         </option>
@@ -550,6 +562,31 @@
                                         class="error-message"
                                         id="error-experience"
                                         >経験の有無を選択してください。</span
+                                    >
+                                </div>
+
+                                <!-- Belt Color (shown only for experienced) -->
+                                <div
+                                    class="form-group-bbb"
+                                    id="form-belt-group"
+                                    hidden
+                                >
+                                    <label for="form-belt"
+                                        >帯色
+                                        <span class="required-bbb">*</span></label
+                                    >
+                                    <select id="form-belt" name="belt">
+                                        <option value="">
+                                            選択してください
+                                        </option>
+                                        <option value="white">白帯</option>
+                                        <option value="blue">青帯</option>
+                                        <option value="purple">紫帯</option>
+                                        <option value="brown">茶帯</option>
+                                        <option value="black">黒帯</option>
+                                    </select>
+                                    <span class="error-message" id="error-belt"
+                                        >帯色を選択してください。</span
                                     >
                                 </div>
 
@@ -609,6 +646,27 @@
                             alt="Blue Belt Blues Logo"
                             class="bbb-logo-img-footer"
                         />
+                    </div>
+                    <div class="footer-social">
+                        <a
+                            href="https://x.com/Blue_Belt_Blues"
+                            class="footer-social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Blue Belt Blues の X (旧Twitter) アカウント"
+                        >
+                            <svg
+                                class="footer-social-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                />
+                            </svg>
+                        </a>
                     </div>
                 </div>
 

@@ -111,6 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
       group: document.getElementById('form-experience').parentElement,
       validate: (val) => val !== ''
     },
+    belt: {
+      input: document.getElementById('form-belt'),
+      group: document.getElementById('form-belt').parentElement,
+      // Belt color is only required when the applicant is experienced.
+      validate: (val) =>
+        document.getElementById('form-experience').value !== 'experienced' ||
+        val !== ''
+    },
     consent: {
       input: document.getElementById('form-consent-check'),
       group: document.getElementById('form-consent-check').closest('.form-consent-bbb'),
@@ -140,6 +148,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Show the belt-color field only when the applicant is a jiu-jitsu practitioner.
+  const experienceInput = document.getElementById('form-experience');
+  const beltGroup = document.getElementById('form-belt-group');
+  const beltInput = document.getElementById('form-belt');
+
+  const toggleBeltField = () => {
+    const isExperienced = experienceInput.value === 'experienced';
+    beltGroup.hidden = !isExperienced;
+    if (!isExperienced) {
+      beltInput.value = '';
+      clearInvalidState('belt');
+    }
+  };
+
+  experienceInput.addEventListener('change', toggleBeltField);
+  toggleBeltField(); // Initial state
+
   // Form submission handler
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -168,17 +193,29 @@ document.addEventListener('DOMContentLoaded', () => {
       // Build a formatted Discord notification from the current form values.
       const expSelect = document.getElementById('form-experience');
       const experienceText = expSelect.options[expSelect.selectedIndex]?.text || '(未選択)';
+      const beltSelect = document.getElementById('form-belt');
+      const discordFields = [
+        { name: 'お名前', value: fields.name.input.value.trim() || '(未入力)' },
+        { name: 'メールアドレス', value: fields.email.input.value.trim() || '(未入力)' },
+        { name: '経験有無', value: experienceText }
+      ];
+      // Only include belt color for experienced applicants.
+      if (expSelect.value === 'experienced' && beltSelect.value) {
+        discordFields.push({
+          name: '帯色',
+          value: beltSelect.options[beltSelect.selectedIndex]?.text || beltSelect.value
+        });
+      }
+      discordFields.push({
+        name: 'メッセージ',
+        value: document.getElementById('form-message').value.trim() || '(なし)'
+      });
       const discordPayload = {
         username: 'Blue Belt Blues 体験申込',
         embeds: [{
           title: '🥋 新しい体験・見学の申込',
           color: 0x1e60d8,
-          fields: [
-            { name: 'お名前', value: fields.name.input.value.trim() || '(未入力)' },
-            { name: 'メールアドレス', value: fields.email.input.value.trim() || '(未入力)' },
-            { name: '経験有無', value: experienceText },
-            { name: 'メッセージ', value: document.getElementById('form-message').value.trim() || '(なし)' }
-          ]
+          fields: discordFields
         }]
       };
 

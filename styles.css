@@ -715,6 +715,27 @@ a {
   margin: 0 auto;
 }
 
+.bjjpedia-screenshot-link {
+  display: block;
+  margin: 28px auto 0 auto;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-card-dark);
+  transition: var(--transition-smooth);
+}
+
+.bjjpedia-screenshot-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.bjjpedia-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .bjjpedia-feedback {
   margin-top: 20px !important;
   padding-top: 20px;
@@ -940,6 +961,11 @@ a {
   flex-direction: column;
 }
 
+/* The class rule above would otherwise override the [hidden] attribute. */
+.form-group-bbb[hidden] {
+  display: none;
+}
+
 .form-group-bbb label {
   font-size: 0.9rem;
   font-weight: 600;
@@ -1107,6 +1133,34 @@ a {
   width: 80px;
   height: auto;
   opacity: 0.6;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-round);
+  border: 1px solid var(--border-dark);
+  color: var(--text-dark-secondary);
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+.footer-social-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .footer-nav h4, .footer-contact h4 {
