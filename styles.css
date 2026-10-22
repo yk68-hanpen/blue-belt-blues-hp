@@ -1329,3 +1329,222 @@ a {
 .modal-body button {
   width: 120px;
 }
+
+/* --- Seminar Section --- */
+.seminar-grid {
+  display: grid;
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .seminar-grid {
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  }
+}
+
+.seminar-flyer-link {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-dark);
+  border: 1px solid var(--border-dark);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.seminar-flyer {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.seminar-details h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.seminar-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 3px 14px;
+  border-radius: var(--radius-round);
+  background: #ffffff;
+  color: var(--bg-dark-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.seminar-info {
+  margin-bottom: 28px;
+  border-top: 1px solid var(--border-dark);
+}
+
+.seminar-info > div {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.seminar-info dt {
+  flex: 0 0 4.5em;
+  color: var(--accent-blue-light);
+  font-weight: 700;
+}
+
+.seminar-info dd {
+  color: var(--text-dark-primary);
+}
+
+.seminar-menu-title {
+  margin-bottom: 12px;
+}
+
+.seminar-menu {
+  list-style: none;
+  counter-reset: seminar;
+  margin-bottom: 16px;
+}
+
+.seminar-menu li {
+  counter-increment: seminar;
+  position: relative;
+  padding: 0 0 12px 40px;
+}
+
+.seminar-menu li::before {
+  content: counter(seminar);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+}
+
+.seminar-menu strong {
+  display: block;
+  color: var(--text-dark-primary);
+}
+
+.seminar-menu span {
+  color: var(--text-dark-muted);
+  font-size: 0.95rem;
+}
+
+.seminar-note {
+  color: var(--text-dark-muted);
+  font-size: 0.95rem;
+}
+
+.seminar-apply {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--bg-dark-input);
+  border: 1px solid var(--border-dark);
+}
+
+.seminar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.seminar-waiver-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--text-dark-muted);
+}
+
+/* --- Seminar Waiver Page --- */
+.waiver-page {
+  background: var(--bg-light-alt);
+  color: var(--text-light-secondary);
+  font-family: var(--font-body);
+  line-height: 1.9;
+}
+
+.waiver-header {
+  background: var(--bg-dark-blue);
+  padding: 20px 0;
+}
+
+.waiver-header a {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.waiver-main {
+  padding: 48px 0 80px;
+}
+
+.waiver-doc {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 40px 28px;
+}
+
+@media (min-width: 768px) {
+  .waiver-doc {
+    padding: 56px;
+  }
+}
+
+.waiver-doc h1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-light-primary);
+  margin-bottom: 24px;
+}
+
+.waiver-doc h2 {
+  font-size: 1.05rem;
+  color: var(--text-light-primary);
+  margin: 32px 0 8px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.waiver-doc ul,
+.waiver-doc ol {
+  padding-left: 1.4em;
+}
+
+.waiver-doc li {
+  margin-bottom: 4px;
+}
+
+.waiver-back {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.seminar-waiver-note a {
+  color: var(--accent-blue-light);
+  text-decoration: underline;
+}
