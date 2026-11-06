@@ -82,10 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('form-submit-btn');
   const successModal = document.getElementById('success-modal');
 
-  // Discord webhook that receives instant notifications of new submissions.
-  const DISCORD_WEBHOOK_URL =
-    'https://discord.com/api/webhooks/1534182564036874351/RiNeCzoyW1Id_uUpJpnpq27zxlVwjjQOSYHYuStSdnBgv0KUDHa1NTrxTsuVVTSsQMeE';
-  
   // Modal toggle elements
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalConfirmBtn = document.getElementById('modal-confirm-btn');
@@ -190,61 +186,17 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `送信中... <i class="fa-solid fa-spinner fa-spin icon-right"></i>`;
 
-      // Build a formatted Discord notification from the current form values.
-      const expSelect = document.getElementById('form-experience');
-      const experienceText = expSelect.options[expSelect.selectedIndex]?.text || '(未選択)';
-      const beltSelect = document.getElementById('form-belt');
-      const discordFields = [
-        { name: 'お名前', value: fields.name.input.value.trim() || '(未入力)' },
-        { name: 'メールアドレス', value: fields.email.input.value.trim() || '(未入力)' },
-        { name: '経験有無', value: experienceText }
-      ];
-      // Only include belt color for experienced applicants.
-      if (expSelect.value === 'experienced' && beltSelect.value) {
-        discordFields.push({
-          name: '帯色',
-          value: beltSelect.options[beltSelect.selectedIndex]?.text || beltSelect.value
-        });
-      }
-      discordFields.push({
-        name: 'メッセージ',
-        value: document.getElementById('form-message').value.trim() || '(なし)'
-      });
-      const discordPayload = {
-        username: 'Blue Belt Blues 体験申込',
-        embeds: [{
-          title: '🥋 新しい体験・見学の申込',
-          color: 0x1e60d8,
-          fields: discordFields
-        }]
-      };
-
-      // Notify Discord (fire-and-forget). Send as multipart/form-data with a
-      // payload_json field instead of application/json: multipart is a
-      // CORS-safelisted content type, so the browser sends it as a "simple"
-      // request with no preflight. Discord then actually receives the message
-      // even though its response is not readable from client-side JS.
-      // The webhook URL is exposed in this static page by design; regenerate it
-      // in Discord if it is ever abused.
-      const discordForm = new FormData();
-      discordForm.append('payload_json', JSON.stringify(discordPayload));
-      const notifyDiscord = fetch(DISCORD_WEBHOOK_URL, {
-        method: 'POST',
-        body: discordForm
-      }).catch(() => {});
-
       // Submit to Formspree (email record). The recipient address is configured
-      // on the Formspree side, so it is never exposed in this page. Success of
-      // this request gates the confirmation modal.
-      const submitFormspree = fetch(form.action, {
+      // on the Formspree side, so it is never exposed in this page.
+      // Never put secrets such as webhook URLs in this file: it is served
+      // publicly as-is.
+      fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' }
-      });
-
-      Promise.allSettled([submitFormspree, notifyDiscord])
-        .then(([formspreeResult]) => {
-          const ok = formspreeResult.status === 'fulfilled' && formspreeResult.value.ok;
+      })
+        .then(res => res.ok, () => false)
+        .then(ok => {
           if (ok) {
             openModal();
             form.reset();
